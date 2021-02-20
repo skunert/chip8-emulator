@@ -1,5 +1,5 @@
  # Chip 8 Emulator
- This repository contains an emulator for the Chip8 architecture. I followed the reference by CowGod http://devernay.free.fr/hacks/chip8/C8TECH10.HTM.
+ This repository contains an emulator for the Chip8 architecture. I followed the [reference by CowGod](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM).
  I used it as a learning project to get familiar with Rust and Emulator internals.
 
 # How to run
