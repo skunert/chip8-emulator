@@ -1,0 +1,10 @@
+[package]
+name = "chip8"
+version = "1.0.0"
+authors = ["Sebastian Kunert <skunert49@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+rand = "0.7.3"
+sdl2 = "0.34.3"
+rodio = "0.13.0"
