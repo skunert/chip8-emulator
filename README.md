@@ -5,3 +5,6 @@
 # How to run
 Find yourself a Chip8 rom (pong is included). 
 Clone the project and run `cargo run PATH_TO_ROM`
+
+# Dependencies
+You need to install [sdl2](www.libsdl.org) from the package manager of your choice.
