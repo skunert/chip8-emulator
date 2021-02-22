@@ -14,8 +14,8 @@ pub trait SoundController {
 }
 
 pub struct DefaultDeviceSoundController {
-    stream_handle: OutputStreamHandle,
-    stream: OutputStream,
+    _stream_handle: OutputStreamHandle,
+    _stream: OutputStream,
     sink: Sink,
 }
 
@@ -41,8 +41,8 @@ impl DefaultDeviceSoundController {
         let source = rodio::source::SineWave::new(800);
         sink.append(source);
         Ok(DefaultDeviceSoundController {
-            stream: stream,
-            stream_handle: stream_handle,
+            _stream: stream,
+            _stream_handle: stream_handle,
             sink: sink,
         })
     }

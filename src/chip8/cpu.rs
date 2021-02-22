@@ -111,9 +111,13 @@ impl Cpu {
 
     pub fn load_rom(&mut self, filepath: &str) {
         let rom = fs::read(filepath).expect("Unable to read file.");
-        for (rom_value, memory_value) in rom.as_slice().iter().zip(self.memory[0x200..].as_mut()) {
-            *memory_value = *rom_value;
+        let start_address: usize = 0x200;
+        let end_address = start_address + rom.len();
+        if end_address > self.memory.len() {
+            panic!("Rom is larger than memory. Aborting.");
         }
+
+        self.memory[start_address..end_address].copy_from_slice(&rom);
     }
 
     pub fn step(&mut self) -> StepResult {
